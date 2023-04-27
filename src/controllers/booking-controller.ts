@@ -11,7 +11,7 @@ export async function getBooking(req: AuthenticatedRequest, res: Response, next:
 
     try{ 
 
-        const booking = await bookingService.getBookingById(userId)
+        const booking = await bookingService.getBookingByUserId(userId)
         
         return res.status(httpStatus.OK).send(booking)
 
@@ -26,16 +26,14 @@ export async function postBooking(req: AuthenticatedRequest, res: Response, next
 
     const { roomId } = req.body
     
-    console.log("Estou no controller e quero ver o que recebo no body do request", req.body, "Ver se tem o roomId", req.body.roomId)
-
     try{
 
-        const booking = await bookingService.NewBooking(userId, roomId)
+        const booking = await bookingService.NewBook(userId, roomId)
 
-        return res.status(httpStatus.CREATED).send(booking)
+        return res.status(httpStatus.OK).send(booking)
 
     } catch(err){
-        console.log("Estou no controller e quero ver o erro que veio", err)
+
         next(err)
     }
 
