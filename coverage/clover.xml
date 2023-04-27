@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1682521469153" clover="3.2.0">
-  <project timestamp="1682521469153" name="All files">
+<coverage generated="1682555247893" clover="3.2.0">
+  <project timestamp="1682555247894" name="All files">
     <metrics statements="533" coveredstatements="508" conditionals="74" coveredconditionals="54" methods="89" coveredmethods="82" elements="696" coveredelements="644" complexity="0" loc="533" ncloc="533" packages="26" files="63" classes="63"/>
     <package name="src">
       <metrics statements="22" coveredstatements="16" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="2"/>
@@ -337,7 +337,7 @@
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="11" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
-        <line num="11" count="11" type="stmt"/>
+        <line num="15" count="11" type="stmt"/>
       </file>
     </package>
     <package name="src.repositories.enrollment-repository">

@@ -80,10 +80,14 @@ describe('GET /booking', () => {
         expect(response.body).toEqual(
             expect.objectContaining({
                 id: booking.id,
-                userId: booking.userId,
-                roomId: booking.roomId,
-                createdAt: booking.createdAt.toISOString(),
-                updatedAt: booking.updatedAt.toISOString(),
+                Room:{
+                    id: room.id,
+                    name: room.name,
+                    capacity: room.capacity,
+                    hotelId:room.hotelId,
+                    createdAt: room.createdAt.toISOString(),
+                    updatedAt: room.updatedAt.toISOString(),
+                } 
               })
           
         );
