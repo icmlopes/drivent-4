@@ -30,7 +30,7 @@ export async function postBooking(req: AuthenticatedRequest, res: Response, next
 
         const booking = await bookingService.NewBook(userId, roomId)
 
-        return res.status(httpStatus.OK).send(booking)
+        return res.status(httpStatus.OK).send(booking.id)
 
     } catch(err){
 
