@@ -6,7 +6,9 @@ import { TicketStatus } from '.prisma/client';
 import { cleanDb, generateValidToken } from '../helpers';
 import httpStatus from 'http-status';
 import {
+    createBooking,
     createEnrollmentWithAddress,
+    createFullRoom,
     createHotel,
     createPayment,
     createRoomWithHotelId,
@@ -16,8 +18,6 @@ import {
     createUser,
     generateCreditCardData,
 } from '../factories';
-import { createBooking } from "../factories/booking-factory";
-import { executionAsyncId } from "async_hooks";
 
 beforeAll(async () => {
     await init()
@@ -177,6 +177,8 @@ describe('POST /booking', () => {
             const ticketType = await createTicketTypeWithHotel();
             const ticket = await createTicket(enrollment.id, ticketType.id, TicketStatus.PAID);
             const payment = await createPayment(ticket.id, ticketType.price);
+            const hotel = await createHotel();
+
             const body = { roomId: 0 };
                   
             const response = await server.post("/booking").set("Authorization", `Bearer ${token}`).send(body);
@@ -191,11 +193,12 @@ describe('POST /booking', () => {
             const ticket = await createTicket(enrollment.id, ticketType.id, TicketStatus.PAID);
             const payment = await createPayment(ticket.id, ticketType.price);
             const hotel = await createHotel()
-            const bookRoom = await createBooking(user.id, hotel.id)
-            const body = { roomId: bookRoom.id };
+            const room = await createFullRoom(hotel.id)
+            const teste = await createBooking(user.id, room.id)
+            const body = { roomId: room.id };
                   
             const response = await server.post("/booking").set("Authorization", `Bearer ${token}`).send(body);
-            expect(response.status).toBe(httpStatus.NOT_FOUND);
+            expect(response.status).toBe(httpStatus.FORBIDDEN);
         });
 
     
@@ -223,14 +226,13 @@ describe('POST /booking', () => {
           const payment = await createPayment(ticket.id, ticketType.price);
           const createdHotel = await createHotel();
           const room = await createRoomWithHotelId(createdHotel.id)
+          const newBook = await createBooking(user.id, room.id)
     
-          const body = { roomId: room.id }
-          const response = await server.get(`/hotels/${createdHotel.id}`).set('Authorization', `Bearer ${token}`);
+          const body = { roomId: newBook.roomId }
+          const response = await server.get("/booking").set('Authorization', `Bearer ${token}`);
     
-          expect(response.status).toEqual(httpStatus.OK);
+          expect(response.status).toBe(httpStatus.OK);
     
-          expect(response.status).toBe(200)
-
         });
     
       });

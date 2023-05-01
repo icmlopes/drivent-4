@@ -28,7 +28,7 @@ export async function postBooking(req: AuthenticatedRequest, res: Response, next
     
     try{
 
-        const booking = await bookingService.NewBook(userId, roomId)
+        const booking = await bookingService.newBook(userId, roomId)
 
         return res.status(httpStatus.OK).send(booking.id)
 

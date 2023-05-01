@@ -20,13 +20,14 @@ async function roomIsAvailable(roomId: number){
 
     const room = await bookingRepository.findRoom(roomId)
 
+    if(!room){
+        throw notFoundError()
+    }
+
     if(room.capacity === 0){
         throw forbiddenError()
     }
 
-    if(!room){
-        throw notFoundError()
-    }
 }
 
 async function verifyAllRules(userId: number){
@@ -44,7 +45,7 @@ async function verifyAllRules(userId: number){
     }
 }
 
-async function NewBook(userId: number, roomId: number){
+async function newBook(userId: number, roomId: number){
 
     await verifyAllRules(userId)
     await roomIsAvailable(roomId)
@@ -56,7 +57,7 @@ async function NewBook(userId: number, roomId: number){
 
 const bookingService = { 
     getBookingByUserId,
-    NewBook
+    newBook
  };
 
 export default bookingService;
