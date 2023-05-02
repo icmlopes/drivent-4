@@ -333,10 +333,10 @@ describe('PUT /:bookingId', () => {
             const payment = await createPayment(ticket.id, ticketType.price);
             const hotel = await createHotel()
             const room = await createFullRoom(hotel.id)
-            const teste = await createBooking(user.id, room.id)
+            // const teste = await createBooking(user.id, room.id)
             const body = { roomId: room.id };
                   
-        const response = await server.put(`/booking/${teste.id}`).set("Authorization", `Bearer ${token}`).send(body);
+        const response = await server.put(`/booking/${room.id}`).set("Authorization", `Bearer ${token}`).send(body);
             expect(response.status).toBe(httpStatus.FORBIDDEN);
         });
 
@@ -356,7 +356,7 @@ describe('PUT /:bookingId', () => {
           expect(response.status).toEqual(httpStatus.NOT_FOUND);
         });
 
-        it("should respond with status 403 when user has no bookings", async () => {
+        it("should respond with status 403 when user doesn't have booking", async () => {
             const user = await createUser();
             const token = await generateValidToken(user);
             const enrollment = await createEnrollmentWithAddress(user);
