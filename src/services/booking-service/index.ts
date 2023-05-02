@@ -56,7 +56,6 @@ async function newBook(userId: number, roomId: number){
     return booking
 }
 
-
 export async function updateBookingRoom(userId: number, bookingId: number, roomId: number){
 
     await verifyAllRules(userId)
@@ -65,8 +64,6 @@ export async function updateBookingRoom(userId: number, bookingId: number, roomI
     throw notFoundError()        
     }
     await roomIsAvailable(roomId)
-
-    const data = { roomId }
 
     const changeBooking = bookingRepository.updateBooking(bookingId, roomId)
 
