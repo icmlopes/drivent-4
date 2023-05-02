@@ -57,14 +57,22 @@ async function newBook(userId: number, roomId: number){
     return booking
 }
 
+async function userWithNoBooking(userId:number){
+    const booking = await bookingRepository.findBookingByUserId(userId)
+
+    if(!booking){
+        throw forbiddenError()
+    }
+}
+
 export async function updateBookingRoom(userId: number, bookingId: number, roomId: number){
 
     await verifyAllRules(userId)
-    // const checkBooking = await getBookingByUserId(userId)
-    // if( checkBooking.id !== bookingId ){
-    // throw notFoundError()        
-    // }
+    
     await roomIsAvailable(roomId)
+
+    await userWithNoBooking(userId)
+    
 
     const changeBooking = bookingRepository.updateBooking(bookingId, roomId)
 

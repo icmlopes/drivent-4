@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1683049202694" clover="3.2.0">
-  <project timestamp="1683049202694" name="All files">
-    <metrics statements="583" coveredstatements="558" conditionals="85" coveredconditionals="65" methods="99" coveredmethods="92" elements="767" coveredelements="715" complexity="0" loc="583" ncloc="583" packages="26" files="64" classes="64"/>
+<coverage generated="1683051584341" clover="3.2.0">
+  <project timestamp="1683051584342" name="All files">
+    <metrics statements="587" coveredstatements="562" conditionals="86" coveredconditionals="66" methods="100" coveredmethods="93" elements="773" coveredelements="721" complexity="0" loc="587" ncloc="587" packages="26" files="64" classes="64"/>
     <package name="src">
       <metrics statements="22" coveredstatements="16" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="2"/>
       <file name="app.ts" path="/home/isabellalopes/driven/módulo 5/novo m5/drivent-4/src/app.ts">
@@ -89,13 +89,13 @@
         <line num="33" count="1" type="stmt"/>
         <line num="37" count="7" type="stmt"/>
         <line num="42" count="11" type="stmt"/>
-        <line num="44" count="8" type="stmt"/>
-        <line num="46" count="8" type="stmt"/>
-        <line num="48" count="8" type="stmt"/>
-        <line num="50" count="8" type="stmt"/>
-        <line num="52" count="8" type="stmt"/>
+        <line num="44" count="9" type="stmt"/>
+        <line num="46" count="9" type="stmt"/>
+        <line num="48" count="9" type="stmt"/>
+        <line num="50" count="9" type="stmt"/>
+        <line num="52" count="9" type="stmt"/>
         <line num="54" count="1" type="stmt"/>
-        <line num="58" count="7" type="stmt"/>
+        <line num="58" count="8" type="stmt"/>
       </file>
       <file name="enrollments-controller.ts" path="/home/isabellalopes/driven/módulo 5/novo m5/drivent-4/src/controllers/enrollments-controller.ts">
         <metrics statements="20" coveredstatements="19" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
@@ -242,7 +242,7 @@
       <file name="forbidden-error.ts" path="/home/isabellalopes/driven/módulo 5/novo m5/drivent-4/src/errors/forbidden-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="11" type="stmt"/>
-        <line num="4" count="8" type="stmt"/>
+        <line num="4" count="9" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/isabellalopes/driven/módulo 5/novo m5/drivent-4/src/errors/index.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -290,16 +290,16 @@
         <line num="5" count="11" type="stmt"/>
         <line num="6" count="11" type="stmt"/>
         <line num="8" count="11" type="stmt"/>
-        <line num="9" count="90" type="stmt"/>
-        <line num="10" count="90" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="78" type="stmt"/>
-        <line num="13" count="78" type="cond" truecount="0" falsecount="1"/>
-        <line num="15" count="78" type="stmt"/>
-        <line num="16" count="78" type="stmt"/>
-        <line num="18" count="66" type="stmt"/>
-        <line num="23" count="66" type="cond" truecount="1" falsecount="0"/>
-        <line num="25" count="54" type="stmt"/>
-        <line num="27" count="54" type="stmt"/>
+        <line num="9" count="91" type="stmt"/>
+        <line num="10" count="91" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="79" type="stmt"/>
+        <line num="13" count="79" type="cond" truecount="0" falsecount="1"/>
+        <line num="15" count="79" type="stmt"/>
+        <line num="16" count="79" type="stmt"/>
+        <line num="18" count="67" type="stmt"/>
+        <line num="23" count="67" type="cond" truecount="1" falsecount="0"/>
+        <line num="25" count="55" type="stmt"/>
+        <line num="27" count="55" type="stmt"/>
         <line num="29" count="12" type="stmt"/>
         <line num="34" count="36" type="stmt"/>
       </file>
@@ -307,20 +307,20 @@
         <metrics statements="18" coveredstatements="12" conditionals="9" coveredconditionals="5" methods="1" coveredmethods="1"/>
         <line num="2" count="11" type="stmt"/>
         <line num="5" count="11" type="stmt"/>
-        <line num="11" count="25" type="cond" truecount="0" falsecount="1"/>
+        <line num="11" count="26" type="cond" truecount="0" falsecount="1"/>
         <line num="12" count="0" type="stmt"/>
-        <line num="17" count="25" type="cond" truecount="2" falsecount="1"/>
+        <line num="17" count="26" type="cond" truecount="2" falsecount="1"/>
         <line num="18" count="0" type="stmt"/>
-        <line num="23" count="25" type="cond" truecount="0" falsecount="1"/>
+        <line num="23" count="26" type="cond" truecount="0" falsecount="1"/>
         <line num="24" count="0" type="stmt"/>
-        <line num="29" count="25" type="cond" truecount="0" falsecount="1"/>
+        <line num="29" count="26" type="cond" truecount="0" falsecount="1"/>
         <line num="30" count="0" type="stmt"/>
-        <line num="35" count="25" type="cond" truecount="1" falsecount="0"/>
+        <line num="35" count="26" type="cond" truecount="1" falsecount="0"/>
         <line num="36" count="15" type="stmt"/>
-        <line num="41" count="10" type="cond" truecount="1" falsecount="0"/>
+        <line num="41" count="11" type="cond" truecount="1" falsecount="0"/>
         <line num="42" count="2" type="stmt"/>
-        <line num="47" count="8" type="cond" truecount="1" falsecount="0"/>
-        <line num="48" count="8" type="stmt"/>
+        <line num="47" count="9" type="cond" truecount="1" falsecount="0"/>
+        <line num="48" count="9" type="stmt"/>
         <line num="54" count="0" type="stmt"/>
         <line num="55" count="0" type="stmt"/>
       </file>
@@ -361,9 +361,9 @@
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="1" count="11" type="stmt"/>
         <line num="3" count="11" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
-        <line num="25" count="8" type="stmt"/>
+        <line num="25" count="9" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
         <line num="44" count="11" type="stmt"/>
       </file>
@@ -373,7 +373,7 @@
       <file name="index.ts" path="/home/isabellalopes/driven/módulo 5/novo m5/drivent-4/src/repositories/enrollment-repository/index.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="2" count="11" type="stmt"/>
-        <line num="5" count="33" type="stmt"/>
+        <line num="5" count="34" type="stmt"/>
         <line num="18" count="2" type="stmt"/>
         <line num="28" count="6" type="stmt"/>
         <line num="36" count="11" type="stmt"/>
@@ -428,7 +428,7 @@
         <line num="1" count="11" type="stmt"/>
         <line num="2" count="11" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
-        <line num="14" count="25" type="stmt"/>
+        <line num="14" count="26" type="stmt"/>
         <line num="23" count="2" type="stmt"/>
         <line num="29" count="8" type="stmt"/>
         <line num="40" count="3" type="stmt"/>
@@ -633,9 +633,9 @@
       </file>
     </package>
     <package name="src.services.booking-service">
-      <metrics statements="30" coveredstatements="30" conditionals="11" coveredconditionals="11" methods="5" coveredmethods="5"/>
+      <metrics statements="34" coveredstatements="34" conditionals="12" coveredconditionals="12" methods="6" coveredmethods="6"/>
       <file name="index.ts" path="/home/isabellalopes/driven/módulo 5/novo m5/drivent-4/src/services/booking-service/index.ts">
-        <metrics statements="30" coveredstatements="30" conditionals="11" coveredconditionals="11" methods="5" coveredmethods="5"/>
+        <metrics statements="34" coveredstatements="34" conditionals="12" coveredconditionals="12" methods="6" coveredmethods="6"/>
         <line num="1" count="11" type="stmt"/>
         <line num="2" count="11" type="stmt"/>
         <line num="3" count="11" type="stmt"/>
@@ -644,28 +644,32 @@
         <line num="12" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="13" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
-        <line num="22" count="8" type="stmt"/>
-        <line num="24" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="22" count="9" type="stmt"/>
+        <line num="24" count="9" type="cond" truecount="1" falsecount="0"/>
         <line num="25" count="4" type="stmt"/>
-        <line num="28" count="4" type="cond" truecount="3" falsecount="0"/>
+        <line num="28" count="5" type="cond" truecount="3" falsecount="0"/>
         <line num="29" count="2" type="stmt"/>
-        <line num="37" count="16" type="stmt"/>
-        <line num="39" count="16" type="cond" truecount="1" falsecount="0"/>
+        <line num="37" count="17" type="stmt"/>
+        <line num="39" count="17" type="cond" truecount="1" falsecount="0"/>
         <line num="40" count="2" type="stmt"/>
-        <line num="43" count="14" type="stmt"/>
-        <line num="45" count="14" type="cond" truecount="5" falsecount="0"/>
+        <line num="43" count="15" type="stmt"/>
+        <line num="45" count="15" type="cond" truecount="5" falsecount="0"/>
         <line num="46" count="6" type="stmt"/>
         <line num="52" count="8" type="stmt"/>
         <line num="53" count="4" type="stmt"/>
         <line num="55" count="1" type="stmt"/>
         <line num="57" count="1" type="stmt"/>
-        <line num="60" count="11" type="stmt"/>
-        <line num="62" count="8" type="stmt"/>
-        <line num="67" count="4" type="stmt"/>
-        <line num="69" count="1" type="stmt"/>
-        <line num="71" count="1" type="stmt"/>
-        <line num="74" count="11" type="stmt"/>
-        <line num="80" count="11" type="stmt"/>
+        <line num="61" count="2" type="stmt"/>
+        <line num="63" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="68" count="11" type="stmt"/>
+        <line num="70" count="9" type="stmt"/>
+        <line num="72" count="5" type="stmt"/>
+        <line num="74" count="2" type="stmt"/>
+        <line num="77" count="1" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="82" count="11" type="stmt"/>
+        <line num="88" count="11" type="stmt"/>
       </file>
     </package>
     <package name="src.services.enrollments-service">
