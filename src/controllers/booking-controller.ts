@@ -54,6 +54,7 @@ export async function changeBooking(req: AuthenticatedRequest, res: Response, ne
         return res.status(httpStatus.OK).send( {bookingId: newBooking.id} ) 
 
     } catch(err){
+
         next(err)
     }
 }

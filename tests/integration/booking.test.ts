@@ -336,7 +336,7 @@ describe('PUT /:bookingId', () => {
             const teste = await createBooking(user.id, room.id)
             const body = { roomId: room.id };
                   
-            const response = await server.put("/booking/1").set("Authorization", `Bearer ${token}`).send(body);
+        const response = await server.put(`/booking/${teste.id}`).set("Authorization", `Bearer ${token}`).send(body);
             expect(response.status).toBe(httpStatus.FORBIDDEN);
         });
 

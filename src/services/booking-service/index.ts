@@ -25,9 +25,10 @@ async function roomIsAvailable(roomId: number){
         throw notFoundError()
     }
 
-    if(room.capacity === 0){
+    if(room.capacity === 0 || room.capacity <= 0){
         throw forbiddenError()
     }
+
 
 }
 
@@ -59,10 +60,10 @@ async function newBook(userId: number, roomId: number){
 export async function updateBookingRoom(userId: number, bookingId: number, roomId: number){
 
     await verifyAllRules(userId)
-    const checkBooking = await getBookingByUserId(userId)
-    if( checkBooking.id !== bookingId ){
-    throw notFoundError()        
-    }
+    // const checkBooking = await getBookingByUserId(userId)
+    // if( checkBooking.id !== bookingId ){
+    // throw notFoundError()        
+    // }
     await roomIsAvailable(roomId)
 
     const changeBooking = bookingRepository.updateBooking(bookingId, roomId)
