@@ -2,6 +2,7 @@ import { forbiddenError, notFoundError } from "@/errors";
 import bookingRepository from "@/repositories/booking-repository";
 import enrollmentRepository from "@/repositories/enrollment-repository";
 import ticketsRepository from "@/repositories/tickets-repository";
+import dayjs from "dayjs";
 
 
 async function getBookingByUserId(userId: number){
@@ -55,9 +56,27 @@ async function newBook(userId: number, roomId: number){
     return booking
 }
 
+
+export async function updateBookingRoom(userId: number, bookingId: number, roomId: number){
+
+    await verifyAllRules(userId)
+    const checkBooking = await getBookingByUserId(userId)
+    if( checkBooking.id !== bookingId ){
+    throw notFoundError()        
+    }
+    await roomIsAvailable(roomId)
+
+    const data = { roomId }
+
+    const changeBooking = bookingRepository.updateBooking(bookingId, roomId)
+
+    return changeBooking
+}
+
 const bookingService = { 
     getBookingByUserId,
-    newBook
+    newBook,
+    updateBookingRoom
  };
 
 export default bookingService;

@@ -30,11 +30,30 @@ export async function postBooking(req: AuthenticatedRequest, res: Response, next
 
         const booking = await bookingService.newBook(userId, roomId)
 
-        return res.status(httpStatus.OK).send( booking.id )
+        return res.status(httpStatus.OK).send( {bookingId: booking.id} )
 
     } catch(err){
 
         next(err)
     }
 
+}
+
+export async function changeBooking(req: AuthenticatedRequest, res: Response, next: NextFunction){
+
+    const { userId } = req
+
+    const { roomId } = req.body
+
+    const { bookingId } = req.params
+
+    try{
+
+        const newBooking = await bookingService.updateBookingRoom(userId, Number(bookingId), roomId) 
+
+        return res.status(httpStatus.OK).send( {bookingId: newBooking.id} ) 
+
+    } catch(err){
+        next(err)
+    }
 }

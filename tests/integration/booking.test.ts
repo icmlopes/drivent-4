@@ -232,11 +232,7 @@ describe('POST /booking', () => {
           const response = await server.post("/booking").set('Authorization', `Bearer ${token}`).send(body)
     
           expect(response.status).toEqual(httpStatus.OK);
-
     
         });
-    
       });
-
-
 });
